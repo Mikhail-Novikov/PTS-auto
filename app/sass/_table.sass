@@ -1,0 +1,53 @@
+.pts-table
+  border: 1px solid #e8eae6
+  +from(700px)
+    display: table
+  .m-d-table
+    font-weight: 800
+  .pts-table-item
+    display: flex
+    flex-direction: column
+    +from(700px)
+      display: table-row
+      .m-d-table
+        display: none
+    .cell
+      padding: 15px
+      vertical-align: middle
+      +from(700px)
+        display: table-cell
+        border-right: 1px solid #e8eae6
+      &:last-child
+        border-right: 0
+      &:nth-child(1)
+        order: 1       
+        +from(700px)
+          max-width: 110px
+      &:nth-child(2)
+        max-width: 110px
+        order: 0
+        +to(700px)
+          font-size: 16px
+          font-weight: 800
+          display: block
+      &:nth-child(3)
+        +from(700px)
+          max-width: 530px
+      &:nth-child(4)
+        +from(700px)
+          width: 75px
+      &:nth-child(5)
+        +from(700px)
+          width: 75px
+    &:nth-child(odd)
+      background-color: #f8f9f5
+  .slick-dots
+    bottom: -25px
+
+.pts-table-check 
+  img
+    padding-left: 20px
+    display: inline-block
+    transition: $delay-btn
+    &:hover
+      box-shadow: 2px 3px 12px rgba(42, 226, 222, 0.54)

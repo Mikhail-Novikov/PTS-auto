@@ -1,0 +1,365 @@
+doctype html
+html(lang='ru')
+  include templates/_head.jade
+
+  body
+    .wrapper
+      include templates/_header.jade
+
+      main.content
+        .section.promo.container
+          .promo-top.items
+            .pt-item
+              img(src="img/logo-h.png", alt="pst-auto  диагностика авто")
+            span.sep
+
+            .pt-item
+              h1.promo-title
+                span.pt-r Обучение
+                span.pt-b специалистов
+                br
+                span.pt-b.pt-line автосервиса
+                span.pt-r в Санкт-Петербурге
+            span.sep
+
+
+            .pt-item.d-sm-none
+              p.label.color-crimson.txt-uppercase Запись на курсы:
+              br
+              a.link-tel(href="tel: 88127421778") +7 (812)
+                span 742-17-78
+              br
+              a.link-tel(href="tel: 89211876969") +7 (921)
+                span 187-69-69
+
+            span.sep
+
+            .pt-item
+              button.btn-pts.btn-crimson Записаться online
+                i.icon-bell
+
+          .promo-slider.items.js-promo-slider
+            .ps-item
+              img(src="img/promo/p1.png", alt="")
+              a(href="#").ps-btn.btn-pts.btn-purple Подробнее о курсе
+                i.icon-arrow_little
+            .ps-item
+              img(src="img/promo/p2.png", alt="")
+              a(href="#").ps-btn.btn-pts.btn-purple Подробнее о курсе
+                i.icon-arrow_little
+            .ps-item
+              img(src="img/promo/p3.png", alt="")
+              a(href="#").ps-btn.btn-pts.btn-purple Подробнее о курсе
+                i.icon-arrow_little
+            .ps-item
+              img(src="img/promo/p4.png", alt="")
+              a(href="#").ps-btn.btn-pts.btn-purple Подробнее о курсе
+                i.icon-arrow_little
+          .pts-btn-slider
+
+        section.section.pts-desc
+          .container
+            .row
+              h2.color-purple
+                span.heading-line.heading-line--purple  О курсах
+            .items
+              .pts-desc-item
+                img.ptsd-pic(src="img/auto.png")
+              .pts-desc-item
+                p
+                  strong.text-fl Политехническая школа
+                  | — это учебный центр, который
+                  |занимается подготовкой квалифицированных  специалистов
+                  |для автосервисов и ремонтных центров.
+
+                p Обучение проводится по новым эффективным методикам и
+                  |занимает довольно короткие сроки, к примеру,
+                  |курсы автоэлектриков-диагностов можно пройти за два месяца,
+                  |освоение специальности «дизелист-диагност» займет один месяц,
+                  |а повысить уровень квалификации возможно за две недели.
+
+                p Наша организация предлагает своим ученикам
+                  |авторские программы для обучения, которые
+                  |постоянно совершенствуются в соответствии
+                  |с развитием автомобильных технологий.
+                  |Обучение ведется профессиональными преподавателями,
+                  |имеющими большой опыт в области диагностирования
+                  |автомобильной техники.
+                p.txt-right
+                  a(href="#").ps-btn.btn-pts.btn-crimson Программы курсов
+                    i.icon-arrow_little
+
+        section.section.pts-adv
+          .container
+            .row
+              h2.color-bobr
+                span.heading-line.heading-line--bobr Наши преимущества
+            .items
+              .adv-item
+                img(src="img/adv/adv1.png", alt="")
+                div Оборудование ведущих фирм
+              .adv-item
+                img(src="img/adv/adv2.png", alt="")
+                div Опытнейший преподовательский состав
+              .adv-item
+                img(src="img/adv/adv3.png", alt="")
+                div Практические занятия под руководством преподователей
+              .adv-item
+                img(src="img/adv/adv4.png", alt="")
+                div Получители свидетельства 1092 ученика
+
+        section.section.pts-news
+          .container
+            .row
+              h2.color-bir
+                span.heading-line.heading-line--bir Новости
+            .items
+              .news-item
+                time.txt-time 17/09/2018
+                p.news-title Курс — Дизелист-диагност с 5 ноября 2018
+                p.txt-news
+                  |С 5 ноября  2018  реализуется курс по диагностированию автомобильных дизельных двигателей.
+                  |Курс строится по принципу: от простого  — к сложному.
+                  |Более 50 % времени — практические занятия. Проводится запись.
+
+              .news-item
+                time.txt-time 17/09/2018
+                p.news-title Курс — Дизелист-диагност с 5 ноября 2018
+                p.txt-news
+                  |С 5 ноября  2018  реализуется курс по диагностированию автомобильных дизельных двигателей.
+                  |Курс строится по принципу: от простого  — к сложному.
+                  |Более 50 % времени — практические занятия. Проводится запись.
+
+              .news-item
+                time.txt-time 17/09/2018
+                p.news-title Курс — Дизелист-диагност с 5 ноября 2018
+                p.txt-news
+                  |С 5 ноября  2018  реализуется курс по диагностированию автомобильных дизельных двигателей.
+                  |Курс строится по принципу: от простого  — к сложному.
+                  |Более 50 % времени — практические занятия. Проводится запись.
+
+              p
+                a(href="#").ps-btn.btn-pts.btn-bir Все новости
+                  i.icon-arrow_little
+
+
+        section.section.pts-tabs#tabs
+          .container
+            .row
+              h2.color-crimson
+                span.heading-line.heading-line--crimson Курсы
+            .items
+              .menu-div-top(data-tabs='tabs')
+                ul#tabs-nav
+                  li
+                    a.tab-menu.tabs-active(href='#tab1') Автоэлектрик-диагност
+                  li
+                    a.tab-menu(href='#tab2') Дизелист-диагност
+                  li
+                    a.tab-menu(href='#tab3') КПК
+                  li
+                    a.tab-menu(href='#tab4') Курсы шиномонтажа 
+                  li
+                    a.tab-menu(href='#tab5') Дистанционное обучение
+                  li
+                    a.tab-menu(href='#tab6') Все курсы
+                    
+              .tab-div.section
+                .tabs-container
+                  #tab1.tabs-panel(style='display: block;')
+                    | Подготовка по специальности «Автоэлектрик-диагност» реализуется
+                    |в рамках учебного курса «Электрооборудование автомобилей и системы питания бензиновых двигателей».  
+                    |Учебный курс предусматривает изучение теоретических основ функционирования и диагностирования 
+                    |электрооборудования автомобилей и систем питания бензиновых двигателей, 
+                    |а также формирование практических навыков по техническому обслуживанию, 
+                    |устранению неисправностей электрооборудования и систем питания, 
+                    |включая электронные системы управления рабочим процессом бензиновых двигателей.
+                    p.txt-right
+                      a(href="#").ps-btn.btn-pts.btn-crimson Программа курса
+                        i.icon-arrow_little
+
+                  #tab2.tabs-panel
+                    | Подготовка по специальности «Дизелист-диагност» реализуется
+                    |в рамках учебного курса «Электрооборудование автомобилей и системы питания бензиновых двигателей».
+                    |Учебный курс предусматривает изучение теоретических основ функционирования и диагностирования 
+                    |электрооборудования автомобилей и систем питания бензиновых двигателей, 
+                    |а также формирование практических навыков по техническому обслуживанию, 
+                    |устранению неисправностей электрооборудования и систем питания, 
+                    |включая электронные системы управления рабочим процессом бензиновых двигателей.
+                    p.txt-right
+                      a(href="#").ps-btn.btn-pts.btn-crimson Программа курса
+                        i.icon-arrow_little
+                  #tab3.tabs-panel
+                    | Подготовка по специальности «КПК» реализуется
+                    |в рамках учебного курса «Электрооборудование автомобилей и системы питания бензиновых двигателей».  
+                    |Учебный курс предусматривает изучение теоретических основ функционирования и диагностирования 
+                    |электрооборудования автомобилей и систем питания бензиновых двигателей, 
+                    |а также формирование практических навыков по техническому обслуживанию, 
+                    |устранению неисправностей электрооборудования и систем питания, 
+                    |включая электронные системы управления рабочим процессом бензиновых двигателей.
+                    p.txt-right
+                      a(href="#").ps-btn.btn-pts.btn-crimson Программа курса
+                        i.icon-arrow_little
+                  #tab4.tabs-panel
+                    | Подготовка по специальности «Курсы шиномонтажа» реализуется
+                    |в рамках учебного курса «Электрооборудование автомобилей и системы питания бензиновых двигателей».  
+                    |Учебный курс предусматривает изучение теоретических основ функционирования и диагностирования 
+                    |электрооборудования автомобилей и систем питания бензиновых двигателей, 
+                    |а также формирование практических навыков по техническому обслуживанию, 
+                    |устранению неисправностей электрооборудования и систем питания, 
+                    |включая электронные системы управления рабочим процессом бензиновых двигателей.
+                    p.txt-right
+                      a(href="#").ps-btn.btn-pts.btn-crimson Программа курса
+                        i.icon-arrow_little
+                  #tab5.tabs-panel
+                    | Подготовка по специальности «Дистанционное обучение» реализуется
+                    |в рамках учебного курса «Электрооборудование автомобилей и системы питания бензиновых двигателей».
+                    |Учебный курс предусматривает изучение теоретических основ функционирования и диагностирования 
+                    |электрооборудования автомобилей и систем питания бензиновых двигателей, 
+                    |а также формирование практических навыков по техническому обслуживанию, 
+                    |устранению неисправностей электрооборудования и систем питания, 
+                    |включая электронные системы управления рабочим процессом бензиновых двигателей.
+                    p.txt-right
+                      a(href="#").ps-btn.btn-pts.btn-crimson Программа курса
+                        i.icon-arrow_little                    
+                  #tab6.tabs-panel
+                    | Подготовка по специальности «Все курсы» реализуется
+                    |в рамках учебного курса «Электрооборудование автомобилей и системы питания бензиновых двигателей».  
+                    |Учебный курс предусматривает изучение теоретических основ функционирования и диагностирования 
+                    |электрооборудования автомобилей и систем питания бензиновых двигателей, 
+                    |а также формирование практических навыков по техническому обслуживанию, 
+                    |устранению неисправностей электрооборудования и систем питания, 
+                    |включая электронные системы управления рабочим процессом бензиновых двигателей.
+                    p.txt-right
+                      a(href="#").ps-btn.btn-pts.btn-crimson Программа курса
+                        i.icon-arrow_little
+              p.txt-center
+                a(href="#").ps-btn.btn-pts.btn-crimson Все курсы
+                  i.icon-arrow_little
+
+
+        section.section
+          .container
+            .lg-items.section
+              h2.color-bir
+                span.heading-line.heading-line--bir Расписание 
+                span занятий 
+                span с 26 по 2 декабря
+              .pts-table.js-table-slider
+
+                .pts-table-item
+                  .cell 
+                    span.m-d-table Преподователь: 
+                    span Крайнов
+                  .cell Понедельник
+                  .cell Т-4: Электронные системы зажигания с механическим и статическим распределением высоковольтных импульсов.4.4, 4.5
+                  .cell 82-21
+                  .cell 2113
+                .pts-table-item
+                  .cell 
+                    span.m-d-table Преподователь: 
+                    span Крайнов
+                  .cell Вторник
+                  .cell Т-4: Система зажигания (ЛПЗ-4.6.2) РК-2
+                  .cell 82-21
+                  .cell 2113
+                .pts-table-item
+                  .cell 
+                    span.m-d-table Преподователь: 
+                    span Крайнов
+                  .cell Среда
+                  .cell Т-4: Системы: электроснабжения, электростартерного пуска, зажигания (ПЗ-4.7.1)
+                  .cell 82-21
+                  .cell Лаб.
+                .pts-table-item
+                  .cell 
+                    span.m-d-table Преподователь: 
+                    span Крайнов
+                  .cell Четверг
+                  .cell Т-4: Система зажигания (ЛПЗ-4.6.2) РК-2
+                  .cell 82-21
+                  .cell 2113
+                .pts-table-item
+                  .cell 
+                    span.m-d-table Преподователь: 
+                    span Крайнов
+                  .cell Пятница
+                  .cell Резерв
+                  .cell 82-21
+                  .cell 2113
+
+              a.pts-table-check.d-lg-none(href="#" title="Пройти тест" target="_blank")
+                img(src="img/check-know.png", alt="")
+
+            .row.txt-center
+              a(href="#").ps-btn.btn-pts.btn-bir Всё расписание
+                i.icon-arrow_little
+
+        section.section.pts-device
+          .container
+            .lg-items
+              h2.color-bir
+                span.heading-line.heading-line--bir Оборудование
+                span на котором ведутся занятия
+
+              .device-slider.js-device-slider
+                .device-item
+                  .dvi-pic
+                    img(src="img/device/dev1.png", alt="")
+                  .dvi-d
+                    a(href="#") СКАНДОК ScanDoc
+                    p Программный мультимарочный cистемный сканер поддерживает большое число диагностических протоколов разных производителей.
+                .device-item
+                  .dvi-pic
+                    img(src="img/device/dev2.png", alt="")
+                  .dvi-d
+                    a(href="#") Сканматик
+                    p "Сканматик" — программный мультимарочный системный сканер предназначен для диагностирования автомобилей: ВАЗ/СеАЗ(ОКА)/Иж, ГАЗ/УАЗ/ZAZ, Daewoo и т.д. ...» 
+                .device-item
+                  .dvi-pic
+                    img(src="img/device/dev3.png", alt="")
+                  .dvi-d
+                    a(href="#") BOSCH
+                    p Bosch KTS-540 – программный мультимарочный системный сканер способный работать с широким спектром электронных систем управления автомобиля.
+                .device-item
+                  .dvi-pic
+                    img(src="img/device/dev4.png", alt="")
+                  .dvi-d
+                    a(href="#") LAUNCH Х-431 
+                    p Аппаратный мультимарочный системный сканер предназначен для диагностирования европейских,  японских,  азиатских (Корея, Китай) и большинства американских ...»  автомобилей
+
+        section.section.pts-gallery
+          .container
+            .lg-items
+              h2.color-crimson
+                span.heading-line.heading-line--crimson Фотографии
+                span и видео наших курсов
+
+            .items
+              .pts-gallery-item
+                img(src="img/gallery/g1.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g2.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g3.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g4.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g5.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g6.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g7.png", alt="")
+              .pts-gallery-item
+                img(src="img/gallery/g8.png", alt="")
+
+                
+
+      footer.footer
+
+    script(src='js/jquery.min.js')
+    script(src='js/superfish.min.js')
+    script(src='js/wow.min.js')
+    script(src='js/sticky.js')
+    script(src='js/slick.min.js')
+    script(src='js/main.js')

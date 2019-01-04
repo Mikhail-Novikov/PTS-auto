@@ -1,0 +1,304 @@
+@import "../libs/smart/smart-grid"
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "button"
+@import "type"
+@import "section"
+@import "field"
+@import "mobile-nav"
+@import "promo"
+@import "slick"
+@import "tabs"
+@import "table"
+
+*::-webkit-input-placeholder
+	color: #838888
+	opacity: 1
+
+*:-moz-placeholder
+	color: #838888
+	opacity: 1
+
+*::-moz-placeholder
+	color: #838888
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #838888
+	opacity: 1
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	color: rgb(51, 51, 51)
+	min-width: 320px
+	position: relative
+	font-family: "Helvetica Neue Cyr"
+	line-height: 1.75
+	overflow-x: hidden
+	background-attachment: fixed
+
+	.p-l-0
+		padding-left: 0
+	.p-r-0
+		padding-right: 0
+
+	ul
+		padding: 0
+	ul li
+		list-style: none
+	a
+		text-decoration: none
+		transition: $delay-btn
+		&:hover, &:focus
+			text-decoration: none
+			transition: $delay-btn
+	.absolut-center
+		transform: translateX(-50%)
+		position: absolute
+		left: 50%
+	.wrapper
+		display: flex
+		flex-direction: column
+		height: 100%
+		border-top: 1px solid $crimson
+		padding-left: 8px
+		padding-right: 8px
+	.content
+		flex: 1 0 auto
+		position: relative
+		z-index: 10
+		background: url('../img/bg-top.jpg') no-repeat
+		background-size: contain
+	footer
+		flex: 0 0 auto
+	.d-lg-none
+		+to(1200px)
+			display: none
+	.d-sm-none
+		+to(991px)
+			display: none
+	.d-sm-100
+		+to(991px)
+			width: 100%
+	.lg-items
+		+from(700px)
+			display: flex
+			flex-wrap: wrap
+			margin-left: -15px
+			margin-right: -15px
+
+		
+.items
+	+row-flex()
+	+from(1200px)
+		justify-content: space-between
+	.sep
+		+from(1200px)
+			border-right: 1px solid #e9e9e9
+		margin-right: 15px
+		margin-left: 15px
+	.item-h
+		white-space: nowrap
+		.icon-h
+			opacity: 0.85
+		&:hover
+			.icon-h
+				opacity: 1
+				transition: $delay-btn
+	.icon-h
+		padding-right: 8px
+		vertical-align: middle
+
+
+
+.header
+	background-color: #fff
+	.menu-h
+		box-shadow: 0 4px 21px rgba(20, 26, 45, 0.11)
+		border-top: 1px solid #e9e9e9
+		background-color: #ffffff
+		.items
+			padding-left: 25px
+			justify-content: space-between
+			+from(1200px)
+				padding-left: 30px
+	.items
+		padding-top: 10px
+		padding-bottom: 10px
+		li
+			display: inline-block
+			padding-right: 15px
+			&:last-child
+				padding-right: 0
+			a
+				color: #000000
+				font-size: 12px
+				font-family: 'Helvetica Neue Bold'
+				font-weight: 400
+				text-transform: uppercase
+				&:hover
+					color: $crimson
+				a[class*="icon-"]:before
+					opacity: 1
+
+			a[class*="icon-"]:before
+				opacity: 0.6
+			&.active
+				a
+					color: $crimson
+					border-bottom: 2px solid
+				a[class*="icon-"]:before
+					opacity: 1
+
+// --------------------
+.pts-desc-item
+	+from(700px)
+		width: 50%
+.ptsd-pic
+	width: 250px
+	+from(700px)
+		width: 100%
+
+// --------------------
+.pts-adv
+	background-color: #f9efe3
+	padding: 25px
+	position: relative
+	.items
+		justify-content: space-around
+	&:after
+		content: ""
+		background: url(../img/adv/gear.png) no-repeat center
+		display: block
+		height: 450px
+		position: absolute
+		width: 700px
+		top: -93px
+		left: 50%
+		transform: translateX(-50%)
+.adv-item
+	width: 275px
+	margin-bottom: 25px
+	border: 1px solid #a78a69
+	border-radius: 40px
+	background-color: rgba(255,255,255, 0.35)
+	color: #a78a69
+	text-align: center
+	text-transform: uppercase
+	padding: 15px 40px 15px 40px
+	img
+		max-height: 42px
+		display: block
+		margin: 0 auto 8px
+
+
+//-------------------------
+.news-item
+	+from(800px)
+		max-width: 33.2%
+		padding-left: 50px
+		padding-right: 50px
+		border-right: 1px solid #c6cdd2
+	color: #7a8c96
+	margin-bottom: 25px
+	&:first-child
+		padding-left: 0
+	&:last-child
+		padding-right: 0
+		border-right: none
+.news-title
+	font-family: 'Helvetica Neue Bold'
+
+//-------------------------
+.pts-tabs
+	background: url(../img/bg-tabs.png) no-repeat center #f2edeb
+	min-height: 462px
+	padding: 50px 15px 30px
+	.items
+		align-items: center
+
+//-------------------------
+.device-slider
+	display: flex
+	justify-content: space-between
+.device-item
+	margin-bottom: 25px
+	margin-right: 15px
+	box-shadow: 2px 3px 12px #d0d0d0
+	max-width: 24%
+	border-radius: 30px
+	outline: none
+	+from(700px)
+		display: inline-block	
+		margin-right: 0
+	.dvi-pic
+		height: 175px
+		margin: 0 auto 15px
+		padding: 20px
+		text-align: center
+		img
+			height: 100%
+			display: inline-block
+	.dvi-d
+		padding: 0 20px
+		a
+			width: 100%
+			padding: 10px
+			margin-bottom: 20px
+			border: 3px solid #2cd4d0
+			text-align: center
+			color: #2cd4d0
+			font-family: 'Helvetica Neue Med'
+			&:hover
+				background-color: #2cd4d0
+				color: #fff
+		p
+			text-align: justify
+
+
+//-----------------------------
+.pts-gallery
+	.pts-gallery-item
+		width: 25%
+		img
+			max-width: 100%
+			display: block
+			padding-right: 15px
+			padding-bottom: 15px
+
+	.items
+		@include row-flex()
+		@include md(justify-content, space-between)
+		@include xs(justify-content, center)
+
+		.pts-gallery-item
+			@include size(4)
+			@include size-lg(5)
+			@include size-md(5)
+			@include size-xs(10)
+    
+
+
+//  ФУТЕР
+.footer
+
+
+
+@import "media" // Всегда в конце
+
+
+
+

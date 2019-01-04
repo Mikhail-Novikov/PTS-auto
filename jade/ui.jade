@@ -1,0 +1,131 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ui
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an
+        strong outdated
+        |  browser. Please
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+    link(rel='stylesheet', href='css/libs.min.css')
+    link(rel='stylesheet', href='css/main.css')
+
+    //- link(rel='stylesheet', href='css/reset.css')
+
+  body
+    header
+      h1.text-center.mt-10 UI KIT
+    main.content
+      .container
+        .section
+          h2 Colors
+          table(style="border-collapse: collapse; width: 100%; max-width: 1000px;")
+            each color in ['#fffff', '#f8f9f5', '#f9efe3','#a78a69', '#ff3366;', '#e7239e', '#2cd4d0', 'rgb(51, 51, 51)', '#000000', 'linear-gradient(to right, #f50c5a 0%, #ff4d89 100%);', 'linear-gradient(to right, #e7239e 0%, #f743d7 100%);', 'linear-gradient(to right, #22dcd7 0%, #24e7c9 100%);']
+              tr
+                td(style="padding: 5px; border: 1px solid #ccc;"): div(style=`width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ccc; background: ${color};`)
+                td(style="padding: 5px; border: 1px solid #ccc;"): code= color
+        .section
+          h2 Fonts
+          table(style="border-collapse: collapse; width: 100%; max-width: 1000px;")
+            each font in ['Helvetica Neue Cyr:400:normal', 'Georgia:400:normal', 'HeliosCondBold:400:normal']
+              - font = font.split(':');
+              tr
+                td(style="padding: 5px; border: 1px solid #ccc;"): div(style=`font-family: ${font[0]}; font-weight: ${font[1]}; font-style: ${font[2]};`)= font[0]
+                td(style="padding: 5px; border: 1px solid #ccc;"): code= font[1]
+                td(style="padding: 5px; border: 1px solid #ccc;"): code= font[2]
+
+        .section.content
+          h2 Content
+            h1 Heading h1
+            h2.color-purple.heading-line.heading-line--purple Heading h2
+            h3 Heading h3
+            h4 Heading h4
+            h5 Heading h5
+            h6 Heading h6
+            p 8, 12 и 14 сентября зрителей Телеканала RU.TV ждут три незабываемых вечера фестиваля «Белые Ночи 2017».
+            p Каждое лето в Северной столице проходит международный фестиваль «Белые ночи», который 25 лет назад перевернул представление о мире музыки и продолжает делать это снова и снова. Талантливые молодые исполнители со всего мира выходят на сцену концертного зала «Октябрьский» вместе с самыми популярными исполнителями, которыми восхищаются миллионы зрителей.
+            p Три дня потрясающих хитов, самые неожиданные образы, выступления и слёзы радости от победы - фестиваль «Белые ночи» считается одним из самых долгожданных и ярких событий на берегах Невы!
+            p Зрители Телеканала RU.TV смогут в полной мере насладиться невероятным шоу! Нас ждут три музыкальных вечера - 8, 12 и 14 сентября, начало в 20:00.
+            p Вы увидите самые захватывающие моменты фестиваля - выступления молодых артистов, российских звёзд и мэтров мировой сцены. Участники фестиваля «Белые ночи» - Ани Лорак, Елена Север и Стас Михайлов, Полина Гагарина, ВладиМир, Леонид Агутин, ЮрКисс, Таисия Повалий, группа Queens и другие.
+            p Специальные гости - группы Scorpions и Busta Rhymes.
+            p
+              strong.text-fl Ведущие
+              | музыкального конкурса - Елена Север и Алексей Воробьев.
+
+        .section
+          h2 Form elements
+          .block
+            label.label label
+          .block
+            input.field(type='text' placeholder='Ваше имя')
+            input.field(type='text' placeholder='Ваше имя' disabled='')
+          .block
+            p
+              button.btn-pts.btn-crimson Button
+              button.btn-pts.btn-crimson(disabled='') Button Disabled
+            p
+              a.link-crimson(href='#') Link
+            p
+              a.link-societ(href='#') Link
+
+          .block
+            button.btn-pts.btn-purple Button
+            //a.btn-purple(href='#') Link
+            button.btn-pts.btn-purple(disabled='') Button Disabled
+          .block
+            button.btn-pts.btn-turquoise Button
+            //a.btn-turquoise(href='#') Link
+            button.btn-pts.btn-turquoise(disabled='') Button Disabled
+
+        .section
+          h2 Date
+          time.txt-time 17/09/2018
+
+        .section
+          p
+            a.link-tel-small(href="tel: 88127421778") +7 (812)
+              span 742-17-78
+          p
+            a.link-tel(href="tel: 88127421778") +7 (921)
+              span 187-69-69
+
+        .section
+          h2 SLIDER
+          p Dots
+            ul.slick-dots
+              li.slick-active
+                button
+              li
+                button
+
+          p Arrow
+            .pts-btn-slider
+              .slick-arrow.slick-next.pts-btn-arrow-right
+              .slick-arrow.slick-prev.pts-btn-arrow-left
+
+
+
+    footer.footer
+
+
+
+    script(src='js/jquery.min.js')

@@ -1,0 +1,39 @@
+ul#tabs-nav
+  margin: 0
+  padding: 0
+  position: relative
+  text-align: left
+  li
+    list-style: none
+    display: inline-block
+
+a.tab-menu
+  display: block
+  background-color: transparent
+  font-size: 16px
+  font-family: 'Helvetica Neue Med'
+  color: #fe0d5e
+  padding: 10px
+  text-decoration: none
+  border-bottom: 0
+  border-radius: 3px 3px 0 0
+  transition: 0s
+  &.tabs-active
+    background-color: #fff
+    border: solid 5px #eaeaea
+    color: #a10036
+    border-bottom: 0
+    &:hover
+      transition: 0s
+
+.tabs-container
+  border: solid 5px #eaeaea
+  padding: 10px
+  margin-top: -5px
+  background-color: #fff
+
+.tabs-panel
+  display: none
+  min-height: 150px
+  overflow: auto
+  max-height: 200px
